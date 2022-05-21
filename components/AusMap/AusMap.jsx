@@ -52,7 +52,6 @@ const AusMap = props => {
 			showsUserLocation={userLocation}
 			followsUserLocation={userLocation}
 		>
-			{/* {userLocation && <Marker coordinate={selectedLocation} />} */}
 			{!!selectedLocation && typeof selectedLocation === 'string' && (
 				<Geojson
 					geojson={locationGeoJson(selectedLocation)}
