@@ -13,8 +13,8 @@ export default function App() {
 	const [latitude, setLatitude] = useState(-37.840935);
 	const [longitude, setLongitude] = useState(144.946457);
 	const [currentLocation, setCurrentLocation] = useState(null);
-	const [latitudeDelta, setLatitudeDelta] = useState(0);
-	const [longitudeDelta, setLongitudeDelta] = useState(0);
+	const [latitudeDelta, setLatitudeDelta] = useState(0.0922);
+	const [longitudeDelta, setLongitudeDelta] = useState(0.0922);
 
 	useEffect(() => {
 		(async () => {
