@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 
@@ -9,7 +8,6 @@ import AusMap from './components/AusMap';
 import AUS_STATE from './constants/ausState';
 
 export default function App() {
-	const { Item } = Picker;
 	const [selectedLocation, setSelectedLocation] = useState();
 	const [userLocation, setUserLocation] = useState(false);
 	const [latitude, setLatitude] = useState(-37.840935);
