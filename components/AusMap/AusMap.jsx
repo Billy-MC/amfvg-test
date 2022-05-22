@@ -1,5 +1,10 @@
-import MapView, { Marker, Geojson } from 'react-native-maps';
-import { StyleSheet } from 'react-native';
+import MapView, {
+	Marker,
+	Geojson,
+	Animated,
+	AnimatedRegion,
+} from 'react-native-maps';
+import { StyleSheet, View } from 'react-native';
 
 const AusMap = props => {
 	const {
@@ -61,6 +66,7 @@ const AusMap = props => {
 					fillColor="#4099AD"
 				/>
 			)}
+			<Marker coordinate={{ latitude, longitude }} />
 		</MapView>
 	);
 };

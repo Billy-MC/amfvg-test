@@ -38,16 +38,13 @@ export default function App() {
 		} else {
 			setSelectedLocation(location);
 			setUserLocation(false);
-			const currentLat = AUS_STATE.find(
+			const currentCoordinate = AUS_STATE.find(
 				state => state.value === location
-			)?.latitude;
-			const currentLong = AUS_STATE.find(
-				state => state.value === location
-			)?.longitude;
-			setLatitude(currentLat);
-			setLongitude(currentLong);
-			setLatitudeDelta(20);
-			setLongitudeDelta(20);
+			);
+			setLatitude(currentCoordinate?.coordinate.latitude);
+			setLongitude(currentCoordinate?.coordinate.longitude);
+			setLatitudeDelta(currentCoordinate.latitudeDelta ?? 20);
+			setLongitudeDelta(currentCoordinate.longitudeDelta ?? 20);
 		}
 	};
 
