@@ -61,7 +61,7 @@ const AusMap = props => {
 					fillColor="#4099AD"
 				/>
 			)}
-			<Marker coordinate={{ latitude, longitude }} />
+			{latitude && longitude && <Marker coordinate={{ latitude, longitude }} />}
 		</MapView>
 	);
 };
