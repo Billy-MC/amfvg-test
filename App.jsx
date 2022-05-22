@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 
-import LocationSelector from './components/LocationSelector';
-import AusMap from './components/AusMap';
-import AUS_STATE from './constants/ausState';
+import LocationSelector from './src/components/LocationSelector';
+import AusMap from './src/components/AusMap';
+import AUS_STATE from './src/constants/ausState';
 
 export default function App() {
 	const [selectedLocation, setSelectedLocation] = useState();
@@ -43,8 +43,8 @@ export default function App() {
 			);
 			setLatitude(currentCoordinate?.coordinate.latitude);
 			setLongitude(currentCoordinate?.coordinate.longitude);
-			setLatitudeDelta(currentCoordinate.latitudeDelta ?? 20);
-			setLongitudeDelta(currentCoordinate.longitudeDelta ?? 20);
+			setLatitudeDelta(currentCoordinate?.latitudeDelta ?? 20);
+			setLongitudeDelta(currentCoordinate?.longitudeDelta ?? 20);
 		}
 	};
 

@@ -1,10 +1,5 @@
-import MapView, {
-	Marker,
-	Geojson,
-	Animated,
-	AnimatedRegion,
-} from 'react-native-maps';
-import { StyleSheet, View } from 'react-native';
+import MapView, { Marker, Geojson } from 'react-native-maps';
+import { StyleSheet } from 'react-native';
 
 const AusMap = props => {
 	const {
